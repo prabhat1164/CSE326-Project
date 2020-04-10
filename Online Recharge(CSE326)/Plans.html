@@ -1,0 +1,144 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Recharge Hub</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	
+	
+<?php
+include('ofrreg.php');
+include('../conn.php');
+session_start();
+?>
+</head>
+<body>
+	<div id="background">
+		<div id="page">
+			<div id="header">
+			<div align="right" ><?php if (isset($_SESSION['name']))
+      <font color='blue'></font><br><br>
+	  <a href='../logout.php'><font color='#83f442'>LOGOUT</font></a>
+
+</div>
+				<div id="logo">
+					<a href="index.php"><img src="images/logo.png" alt="LOGO" height="112" width="150"></a>
+				</div>
+				<div id="navigation">
+					<ul>
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li >
+							<a href="prepaid.html">Prepaid</a>
+						</li>
+						<li  >
+						<a href="postpaid.html">Postpaid</a>
+					</li >
+					<li  class="selected">
+						<a href="plans.html">Plans</a>
+					</li>
+					<li>
+						<a href="offers.html">Offers</a>
+					</li>
+					<li >
+						<a href="complaints.html">Complaints</a>
+					</li>
+						
+					</ul>
+				</div>
+			</div>
+			<div id="contents">
+				<div class="box">
+					<div>
+					
+						<div id="contact" class="body">
+						<h1>Plans</h1>
+                        <form id="form2" name="form2" method="post" action="" >
+						<table>
+									<tbody>
+										<tr>
+											<td> Ammount:</td>
+											<td>
+											<input name="rcamt" type="text" value="<?php if ((isset($rcamt))&&($rcamtErr==false)){echo $rcamt;}?>"  class="txtfield" />
+								  <span style="color:red; font-family:Times New Roman; font-size:12px;">*</span>
+									</td>
+										</tr> 
+										<tr>
+											<td> Talktime:</td>
+											<td>
+											<input name="tktm" type="text" value="<?php if ((isset($tktm))&&($tktmErr==false)){echo $tktm;}?>"  class="txtfield" />
+                                <span style="color:red; font-family:Times New Roman; font-size:12px;">*<?php echo $tktmErr;?></span>
+											
+									</td>
+										</tr> 
+										<tr>
+											<td>Valadity:</td>
+											<td>
+											<input name="val" type="text" value="<?php if ((isset($val))&&($valErr==false)){echo $val;}?>" class="txtfield"  />
+                                <span style="color:red; font-family:Times New Roman; font-size:12px;">*<?php echo $valErr;?></span>
+											
+									</td>
+										</tr> 
+										<tr>
+											<td>Operator: </td>
+										<td>
+										<select name="oprtr" value="<?php if ((isset($oprtr))&&($oprtrErr==false)){echo $oprtr;}?>"  class="txtfield">
+                    <option value="">---Please Select Your Operator---</option>
+        	       
+			 
+      	            </select>
+                      <span style="color:red; font-family:Times New Roman; font-size:12px;">*<?php echo $oprtrErr;?></span>
+</td>
+										</tr> 
+										 <tr>
+											<td></td>
+											<td>
+											 <input name="signup" type="submit" value="PAY"class="btn" />
+                                       <input name="cancel" type="submit" value="Reset" class="btn" />
+											
+										</td>
+										</tr>
+										
+										<tr>
+										<td >
+										
+										</tr>
+									</tbody>
+								</table>
+                             </form>
+                    
+<h3>Search plans of your choice</h3>
+						<p><img src="images/rechargeimg.png" alt="Img"></p>
+							<p><img src="images/banner.jpg" alt="Img"></p>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<ul class="navigation">
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li >
+							<a href="prepaid.html">Prepaid</a>
+						</li>
+						<li  >
+						<a href="postpaid.html">Postpaid</a>
+					</li >
+					<li  class="active">
+						<a href="plans.html">Plans</a>
+					</li>
+					<li>
+						<a href="offers.html">Offers</a>
+					</li>
+					<li >
+						<a href="complaints.html">Complaints</a>
+					</li>
+				</ul>
+				
+			</div>
+	</div>
+</body>
+</html>

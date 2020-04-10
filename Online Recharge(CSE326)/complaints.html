@@ -1,0 +1,105 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Recharge Hub</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+
+</head>
+<body>
+	<div id="background">
+		<div id="page">
+			<div id="header">
+			<div align="right" ><?php if (isset($_SESSION['name']))
+      <font color='blue'></font><br><br>
+	  <a href='../logout.php'><font color='#83f442'>LOGOUT</font></a>
+</div>
+				<div id="logo">
+					<a href="index.php"><img src="images/logo.png" alt="LOGO" height="112" width="150"></a>
+				</div>
+				<div id="navigation">
+					<ul>
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li >
+							<a href="prepaid.html">Prepaid</a>
+						</li>
+						<li  >
+						<a href="postpaid.html">Postpaid</a>
+					</li >
+					<li>
+						<a href="plans.html">Plans</a>
+					</li>
+					<li>
+						<a href="offers.html">Offers</a>
+					</li>
+					
+					<li  class="selected">
+						<a href="complaints.html">Complaints</a>
+					</li>
+						
+					</ul>
+				</div>
+			</div>
+			<div id="contents">
+				<div class="box">
+					<div>
+					
+						<div id="table" class="body">
+						<h1>Complaint Portal</h1>
+
+                       <form id="form2" name="form2" method="post" action="" style="margin:auto;">
+                              <table>
+							  <tbody>
+<tr>
+	<th>Name:<input type="text" name="Enter name" size="13px"></th>&emsp13;
+</tr>
+<tr>
+	<th>E-mail:<input type="text" name="Enter E-mail" size="13px"></th>&emsp14;
+</tr>
+<tr>
+	<th>Mobile no.:<input type="text" name="Enter Mobile no." size="13px"></th><br>
+</tr>
+<tr>
+	<th>Complaint:<input type="text" name="Complaint" width="50px" height="50px"></th><br>
+</tr>
+									  </tbody>
+                                  </table>
+                            </form> 
+                                      
+                                      
+<h2></h2>
+						
+							<p><img src="images/banner.jpg" alt="Img"></p>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<ul class="navigation">
+					<li >
+						<a href="index.html">Home</a>
+					</li>
+					<li >
+							<a href="prepaid.html">Prepaid</a>
+						</li>
+						<li  >
+						<a href="postpaid.html">Postpaid</a>
+					</li >
+					<li>
+						<a href="plans.html">Plans</a>
+					</li>
+					<li>
+						<a href="offers.html">Offers</a>
+					</li>
+					<li class="active">
+						<a href="complaints.html">Complaints</a>
+					</li>
+				</ul>
+				
+			</div>
+	</div>
+</body>
+</html>

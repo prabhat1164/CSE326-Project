@@ -1,0 +1,131 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Recharge Hub</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+<?php
+include('oprtrreg.php');
+include('../conn.php');
+session_start();
+?>
+</head>
+<body>
+	<div id="background">
+		<div id="page">
+			<div id="header">
+			<div align="right" ><?php if (isset($_SESSION['name']))
+      <font color='blue'></font><br><br>
+	  <a href='../logout.php'><font color='#83f442'>LOGOUT</font></a>
+</div>
+				<div id="logo">
+					<a href="index.php"><img src="images/logo.png" alt="LOGO" height="112" width="150"></a>
+				</div>
+				<div id="navigation">
+					<ul>
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li >
+							<a href="prepaid.html">Prepaid</a>
+						</li>
+						<li  >
+						<a href="postpaid.html">Postpaid</a>
+					</li >
+					<li >
+						<a href="Plans.html">Plans</a>
+					</li>
+					<li  class="selected">
+						<a href="offers.html">Offers</a>
+					</li>
+					<li >
+						<a href="complaints.html">Complaints</a>
+					</li>
+						
+					</ul>
+				</div>
+			</div>
+			<div id="contents">
+				<div class="box">
+					<div>
+					
+						<div id="contact" class="body">
+						<h1>OFFERS</h1>
+                        <form id="form2" name="form2" method="post" action="" style="margin:auto;">
+						<table>
+									<tbody>
+										<tr>
+											<td>Operator:</td>
+											<td>
+											<input name="operator" type="text" value="<?php if ((isset($operator))&&($operatorErr==false)){echo $operator;}?>"  class="txtfield" />
+								  <span style="color:red; font-family:Times New Roman; font-size:12px;">*<?php echo $operatorErr;?></span>
+
+										</td>
+										</tr> 
+										
+										
+										<tr>
+											<td>Circle:  </td>
+										<td>
+										<select name="oprtr" value=""  class="txtfield">
+                    <option value="">---Please Select Your Circle---</option>
+        	        <?php
+					 $query="select * from tboprtr";
+					$result=mysqli_query($conn,$query);
+					  while($array = mysqli_fetch_array($result))
+			  {
+				echo "<option value='$array[1]'>$array[1]</option>";
+			  }
+			  ?>
+      	            
+										</td>
+										</tr> 
+										 <tr>
+											<td></td>
+											<td>
+											<input name="signup" type="submit" value="Show" class="btn" />
+                                       <input name="cancel" type="submit" value="Reset"  class="btn"/>
+										</td>
+										</tr>
+										
+										<tr>
+										<td >
+										
+										</tr>
+									</tbody>
+								</table>
+                             </form>
+	<h2>Only at Recharge Hub</h2>
+						<p><img src="images/rechargeimg.png" alt="Img"></p>
+							<p><img src="images/banner.jpg" alt="Img"></p>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<ul class="navigation">
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li >
+							<a href="prepaid.html">Prepaid</a>
+						</li>
+						<li  >
+						<a href="postpaid.html">Postpaid</a>
+					</li >
+					<li>
+						<a href="plans.html">Plans</a>
+					</li>
+					<li class="active">
+						<a href="offers.html">Offers</a>
+					</li>
+					<li >
+						<a href="complaints.html">Complaints</a>
+					</li>
+				</ul>
+				
+			</div>
+	</div>
+</body>
+</html>

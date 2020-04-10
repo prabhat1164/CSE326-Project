@@ -1,0 +1,90 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Recharge Hub</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+
+<?php
+include('bnknmreg.php');
+include('../conn.php');
+session_start();
+?>
+</head>
+<body>
+	<div id="background">
+		<div id="page">
+			<div id="header">
+			<div align="right" ><?php if (isset($_SESSION['name']))
+      <font color='blue'></font><br><br>
+	  <a href='../logout.php'><font color='#83f442'>LOGOUT</font></a>
+
+</div>
+				<div id="logo">
+					<a href="index.php"><img src="images/logo.png" alt="LOGO" height="112" width="150"></a>
+				</div>
+				<div id="navigation">
+					<ul>
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li >
+							<a href="prepaid.html">Prepaid</a>
+						</li>
+						<li  class="selected" >
+						<a href="postpaid.html">Postpaid</a>
+					</li >
+					<li>
+						<a href="plans.html">Plans</a>
+					</li>
+					<li>
+						<a href="offers.html">Offers</a>
+					</li>
+					<li >
+						<a href="complaints.html">Complaints</a>
+					</li>
+						
+					</ul>
+				</div>
+			</div>
+			<div id="contents">
+				<div class="box">
+					<div>
+					
+						<div id="contact" class="body">
+						<h1>Postpaid</h1>
+                       
+<h2>Recharge Hub</h2>
+						<p><img src="images/rechargeimg.png" alt="Img"></p>
+							<p><img src="images/banner.jpg" alt="Img"></p>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<ul class="navigation">
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li >
+							<a href="prepaid.html">Prepaid</a>
+						</li>
+						<li  class="active">
+						<a href="postpaid.html">Postpaid</a>
+					</li >
+					<li>
+						<a href="plans.html">Plans</a>
+					</li>
+					<li>
+						<a href="offers.html">Offers</a>
+					</li>
+					<li >
+						<a href="complaints.html">Complaints</a>
+					</li>
+				</ul>
+				
+			</div>
+	</div>
+</body>
+</html>

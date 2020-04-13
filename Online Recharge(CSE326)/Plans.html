@@ -4,18 +4,13 @@
 	<title>Recharge Hub</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	
-	
-<?php
-include('ofrreg.php');
-include('../conn.php');
-session_start();
-?>
+
 </head>
 <body>
 	<div id="background">
 		<div id="page">
 			<div id="header">
-			<div align="right" ><?php if (isset($_SESSION['name']))
+			<div align="right" >
       <font color='blue'></font><br><br>
 	  <a href='../logout.php'><font color='#83f442'>LOGOUT</font></a>
 
@@ -59,35 +54,41 @@ session_start();
 										<tr>
 											<td> Ammount:</td>
 											<td>
-											<input name="rcamt" type="text" value="<?php if ((isset($rcamt))&&($rcamtErr==false)){echo $rcamt;}?>"  class="txtfield" />
+											<input name="rcamt" type="text"  class="txtfield" />
 								  <span style="color:red; font-family:Times New Roman; font-size:12px;">*</span>
 									</td>
 										</tr> 
 										<tr>
 											<td> Talktime:</td>
 											<td>
-											<input name="tktm" type="text" value="<?php if ((isset($tktm))&&($tktmErr==false)){echo $tktm;}?>"  class="txtfield" />
-                                <span style="color:red; font-family:Times New Roman; font-size:12px;">*<?php echo $tktmErr;?></span>
+											<input name="tktm" type="text"   class="txtfield" />
+                                <span style="color:red; font-family:Times New Roman; font-size:12px;"></span>
 											
 									</td>
 										</tr> 
 										<tr>
 											<td>Valadity:</td>
 											<td>
-											<input name="val" type="text" value="<?php if ((isset($val))&&($valErr==false)){echo $val;}?>" class="txtfield"  />
-                                <span style="color:red; font-family:Times New Roman; font-size:12px;">*<?php echo $valErr;?></span>
+											<input name="val" type="text"  class="txtfield"  />
+                                <span style="color:red; font-family:Times New Roman; font-size:12px;"></span>
 											
 									</td>
 										</tr> 
 										<tr>
 											<td>Operator: </td>
 										<td>
-										<select name="oprtr" value="<?php if ((isset($oprtr))&&($oprtrErr==false)){echo $oprtr;}?>"  class="txtfield">
-                    <option value="">---Please Select Your Operator---</option>
+										<select name="oprtr"   class="txtfield">
+					<option value="">---Please Select Your Operator---</option>
+					<option value="select">Select</option>
+								<option value="Vodafone">Vodafone</option>
+								<option value="Idea">Idea</option>
+								<option value="Airtel">Airtel</option>
+								<option value="JIO">JIO</option>
+								<option value="BSNL">BSNL</option>
         	       
 			 
       	            </select>
-                      <span style="color:red; font-family:Times New Roman; font-size:12px;">*<?php echo $oprtrErr;?></span>
+                      <span style="color:red; font-family:Times New Roman; font-size:12px;"></span>
 </td>
 										</tr> 
 										 <tr>
